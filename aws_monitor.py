@@ -1,4 +1,5 @@
-﻿import boto3
+@'
+import boto3
 import botocore
 import time
 import os
@@ -120,3 +121,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+'@ | Set-Content aws_monitor.py -Encoding UTF8
+
