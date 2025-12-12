@@ -1,2 +1,5 @@
-﻿boto3
+boto3
 botocore
+tabulate
+
+openai>=1.0.0
