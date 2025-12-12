@@ -94,7 +94,6 @@ def detect_anomaly(cost_today: float, cost_yesterday: float, threshold: float = 
     return cost_today / cost_yesterday >= threshold
 
 def send_alert(message: str):
-    """Webhook 없이 콘솔로만 알림"""
     print("\n[ALERT] 비용 이상 감지!")
     print(message)
     print("[✔] 알림 완료!")
@@ -127,10 +126,9 @@ def main() -> None:
                     )
                     send_alert(alert_message)
             prev_cost = today_total
+
         print(f"\n⏳ 다음 실행까지 {interval_minutes}분 대기...")
         time.sleep(interval_minutes * 60)
 
 if __name__ == "__main__":
     main()
-
-
